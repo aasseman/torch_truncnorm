@@ -4,13 +4,16 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='torch_truncnorm',
+    name='torch-truncnorm',
     version='0.0.2',
     long_description=long_description,
     long_description_content_type="text/markdown",
     description='Truncated Normal distribution in PyTorch',
     python_requires='>=3.6',
     packages=setuptools.find_packages(),
+    install_requires=[
+        "torch>=1.5.0"
+    ],
     author='Anton Obukhov',
     license='BSD',
     url='https://www.github.com/toshas/torch_truncnorm',
